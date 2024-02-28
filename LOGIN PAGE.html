@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link rel="icon" href="pngtree-school-logo-png-image_6851480.png">
+</head>
+<body style="background-image: url('bacground.jpg'); background-repeat: no-repeat;">
+
+    <div style="border: 1px solid #ccc; padding: 30px 20px; width: 40%; text-align: center; margin: 0 auto; margin-top: 16%;">
+        <img src="pngtree-school-logo-png-image_6851480.png" alt="School Logo" style="height: 35%; width: 35%; border-radius: 50%;">
+        <br><br>
+        <input type="text" id="usern" placeholder="User Name" style="margin: 10px 0; padding: 10px 20px; border-radius: 20px; font-size: 18px; border: 1px solid #ccc; width: 80%;">
+        <br><br>
+        <input type="password" id="passw" placeholder="Password" style="margin: 10px 0; padding: 10px 20px; border-radius: 20px; font-size: 18px; border: 1px solid #ccc; width: 80%;">
+        <br><br>
+        <input type="button" value="Submit" onclick="login()" style="background-color: #4CAF50; color: white; padding: 12px 24px; border-radius: 20px; cursor: pointer; border: none; font-size: 18px;">
+        <br><br>
+        <p id="limko" style="color: red; background-color: white; padding: 2px; border-radius: 2px; font-weight: bolder; font-size: large;"></p>
+    </div>
+    
+<script>
+    alert("USER NAME = admin  (OR) PASSWORD = admin123" );
+</script>
+
+    <script>
+        function login(){
+                
+        var username = document.getElementById('usern').value;
+        var password = document.getElementById('passw').value;
+        if(username == "admin" && password == "admin123"){
+            window.location.href = "MARKSHEET.html";
+        }
+        else if(username !== "admin" && password !== "admin123"){
+            document.getElementById('limko').innerHTML = "Invalid Username OR Password";
+        }
+        else{
+            document.getElementById('limko').innerHTML = "LOGIN FAILED";
+        }
+        document.getElementById('usern').value = "";
+        document.getElementById('passw').value = "";
+    
+    }
+
+    </script>
+</body>
+</html>
